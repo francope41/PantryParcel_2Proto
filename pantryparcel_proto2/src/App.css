@@ -1,0 +1,51 @@
+/* Apply the Poppins font family to the whole body */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white; /* Set default text color to white for the whole website */
+}
+
+/* Style the navigation links */
+nav a {
+  font-weight: bold; /* Make the font bold */
+  font-size: 1.2em; /* Increase font size */
+  color: white; /* Set link color to white */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px; /* Add some padding to make the links bigger */
+  display: block; /* Stack the links vertically */
+  border: 2px solid transparent; /* Set border to transparent initially */
+  margin: 1rem 0; /* Add top and bottom margin */
+}
+
+/* Change border color on hover */
+nav a:hover {
+  border: 2px solid white; /* Show white border on hover */
+}
+
+/* Style for content grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Style for individual content boxes */
+.content-box {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  background-color: white; /* Set a background color for content boxes */
+  color: black; /* Set text color to black for content */
+}
+
+/* Ensure images in content boxes are responsive */
+.content-box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Style for the main title */
+h1 {
+  color: black; /* Set title color to black or any color you prefer */
+}
