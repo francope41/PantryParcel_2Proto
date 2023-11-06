@@ -1,107 +1,78 @@
-/* Adjusting Carousel Image */
-.carousel-img {
-  max-height: 400px; 
-  object-fit: cover;
-  padding-right: 30%;
+.home-container {
+  padding: 0; /* Remove padding to allow carousel to be full width */
 }
 
-/* Styling the content to overlay on top of the images */
-.carousel-content {
+.home-carousel .carousel-item {
   position: relative;
-  height: 400px; /* Assuming the slide should have a certain height */
-  align-items: center; /* align items vertically centered */
+  text-align: center; /* Center the text */
 }
 
-.content-container {
-  display: flex;
-  flex-direction: column; /* stack content vertically */
-  justify-content: center; /* center content vertically */
-  height: 100%; /* take full height of parent */
+.home-carousel .carousel-caption {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  border-radius: 5px; /* Optional: adds rounded corners to the background */
+  display: inline-block; /* Wraps the background tightly around the text */
+  padding: 0.5rem 1rem; /* Padding around the text */
+
+}
+.carousel-img {
+  max-height: 400px; /* Adjust the height as needed */
+  object-fit: cover;
+  margin-left: auto; /* Center the image */
+  margin-right: auto; /* Center the image */
+  display: block; /* Needed to apply auto margins */
+  width: auto; /* This will maintain the aspect ratio */
+  max-width: 80%; /* Adjust this value to set how wide the image should be */
 }
 
-.content {
-  color: rgb(0, 0, 0); /* assuming the content text should be white */
-  padding-left: 10%; /* space from the left */
+.banner-row {
+  margin-top: 3rem; /* Space out the banner from the carousel */
 }
 
-.carousel-content .btn {
-  margin-top: 20px;
-  background-color: #bac34e; /* example color, you can adjust */
-  color: #fff;
-  border: none;
-}
-
-/* Styling for carousel controls (prev/next buttons) */
-.carousel-control-prev, .carousel-control-next {
-  background-color: white; 
-  width: 50px; 
-  height: 50px;
-  align-items: center; /* center the icons vertically */
-  justify-content: center; /* center the icons horizontally */
-  top: 50%; /* move it to the middle of the container */
-  transform: translateY(-50%); /* adjust the position to truly center it */
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  filter: invert(1); 
-  width: 20px; /* adjust as needed */
-  height: 20px; /* adjust as needed */
-}
-
-/* Adjust the positioning of the controls */
-.carousel-control-prev {
-  align-items: center; /* center the icons vertically */
-}
-
-.carousel-control-next {
-  align-items: center; /* center the icons vertically */
-}
-
-.banner-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
-  gap: 1.5rem;
+.banner-col {
+  padding: 0; /* Remove padding for a flush grid look */
 }
 
 .banner {
   position: relative;
-  height: 20rem;
   overflow: hidden;
 }
 
-.banner:hover img {
-  transform: scale(1.2);
-  transition: transform 0.3s ease-in-out; /* Transition effect for 0.3 seconds */
-}
-
-.banner img {
-  height: 100%;
+.banner-img {
   width: 100%;
-  object-fit: cover;
+  transition: transform 0.5s ease; /* Smooth transition for hover effect */
 }
 
-.banner .content {
+.banner:hover .banner-img {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.banner-caption {
   position: absolute;
-  top: 50%;
-  left: 2rem;
-  transform: translateY(-50%);
+  bottom: 20%;
+  left: 10%;
 }
 
-.banner .content span {
-  color: #666;
-  font-size: 1.5rem;
-}
-
-.banner .content h3 {
-  font-size: 2rem;
-  padding-top: .5rem;
-  color: #222;
-}
-
-.banner .content .btn {
-  padding: .8rem 2.5rem;
-  margin-top: 20px;
-  background-color: #bac34e; /* example color, you can adjust */
+.banner-caption h3 {
   color: #fff;
-  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline; /* Only take up the space of the content */
+  padding: 0.5rem 1rem; /* Padding around the text */
+}
+
+.btn-outline-primary, .btn-outline-secondary {
+  color: #fff;
+  border-color: #333;
+  background-color: rgba(50, 50, 50, 0.8); /* Dark grey with opacity for blurriness */
+
+}
+
+.btn-outline-primary:hover, .btn-outline-secondary:hover {
+  background-color: rgba(26, 26, 26, 0.9); /* Slightly darker on hover */
+  color: #fff;
+  border-color: #333;
 }

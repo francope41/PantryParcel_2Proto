@@ -17,6 +17,7 @@ import ReviewPage from './components/review/review'
 import ContactPage from './components/contact/contact'
 import { CartProvider } from './components/CartProvider/CartProvider';
 import Checkout from './components/Checkout/Checkout'
+import MainLayout from './components/MainLayout';
 
 Amplify.configure(awsExports);
 
@@ -25,7 +26,9 @@ function App() {
     <CartProvider>
       <div>
         <SiteNav />
+        <div className="main-layout">
         <Routes>
+          <Route element={<MainLayout />}> {/* Wrap sub-routes within MainLayout */}
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
@@ -34,8 +37,10 @@ function App() {
           <Route path="/review" element={<ReviewPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/checkout" element={<Checkout />} />
+          </Route>
           {/* Add other routes as needed */}
         </Routes>
+        </div>
         <SiteFooter />
       </div>
     </CartProvider>

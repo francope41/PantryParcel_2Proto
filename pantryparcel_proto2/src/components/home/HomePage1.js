@@ -45,54 +45,41 @@ function HomePage() {
     }
 
     return (
-        <Container fluid style={{ 
-            backgroundImage: `url(${homeBg})`, 
-            backgroundSize: 'cover', 
-            backgroundPosition: 'center center',
-            backgroundRepeat: 'no-repeat'
-        }}>
-            {/* Slider Component */}
-            <Row className="my-5">
-                <Col xs={12}>
-                    <Carousel>
-                        {[home_img_1, home_img_2, home_img_3].map((imgSrc, index) => (
-                            <Carousel.Item key={index}>
-                            <Row className="carousel-content">
-                                <Col md={6} className="content-container">
-                                    <div className="content">
-                                        <span>fresh and organic</span>
-                                        <h3>upto 50% off</h3>
-                                        <Button variant="primary" onClick={goToShop}>Shop Now</Button>
-                                    </div>
-                                </Col>
-                                <Col md={6}>
-                                    <img
-                                        className="carousel-img"
-                                        src={imgSrc}
-                                        alt={`Slide ${index + 1}`}
-                                    />
-                                </Col>
-                            </Row>
-                        </Carousel.Item>
-                        ))}
-                    </Carousel>
-                </Col>
-            </Row>
-                        
-            <section className="banner-container">
-                {[banner1, banner2, banner3].map((bannerImg, index) => (
-                    <div className="banner" key={index}>
-                        <img src={bannerImg} alt={`Banner ${index + 1}`} />
-                        <div className="content">
-                            <span>limited sales</span>
-                            <h3>upto 50% off</h3>
-                            <Button variant="primary" onClick={goToShop}>Shop Now</Button>
-                        </div>
-                    </div>
+        <Container fluid className="home-container">
+          <Row className="my-5 home-carousel">
+            <Col xs={12}>
+              <Carousel>
+                {[home_img_1, home_img_2, home_img_3].map((imgSrc, index) => (
+                  <Carousel.Item key={index} className="carousel-item">
+                    <img
+                      className="d-block carousel-img"
+                      src={imgSrc}
+                      alt={`Slide ${index + 1}`}
+                    />
+                    <Carousel.Caption className="carousel-caption">
+                      <h3>Upto 50% off on fresh and organic</h3>
+                      <Button variant="outline-primary" onClick={goToShop}>Shop Now</Button>
+                    </Carousel.Caption>
+                  </Carousel.Item>
                 ))}
-            </section>
-
+              </Carousel>
+            </Col>
+          </Row>
+          
+          <Row className="banner-row">
+            {[banner1, banner2, banner3].map((bannerImg, index) => (
+              <Col md={4} key={index} className="banner-col">
+                <div className="banner">
+                  <img src={bannerImg} alt={`Banner ${index + 1}`} className="banner-img" />
+                  <div className="banner-caption">
+                    <h3>Upto 50% off</h3>
+                    <Button variant="outline-secondary" onClick={goToShop}>Shop Now</Button>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
         </Container>
-    )
-}
-export default HomePage;
+      );
+    }
+    export default HomePage;
