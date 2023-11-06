@@ -1,0 +1,100 @@
+
+.navbar-logo {
+  height: 80px; /* Adjust the height as needed */
+  width: auto;  /*Maintain aspect ratio */
+  margin-right: 10px; /* Add some space between logo and text */
+}
+  
+  .nav-link {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    transition: font-size 0.3s, color 0.3s;
+  }
+  .nav-link:hover {
+    color: #bac34e ;
+    font-size: medium;
+  }
+  
+  .navbar-nav {
+    align-items: center;
+    display: flex;
+    align-items: center; 
+  }
+  
+  .navbar-brand {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .navbar-brand span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .search-bar-form {
+    position: absolute;
+    top: 100%; /* Adjust as necessary */
+    right: 300px;
+    margin-top: 0.1rem; /* Spacing from the icon */
+  }
+  
+  .search-input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .search-button {
+    padding: 0.5rem;
+  }
+  
+  .site-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Width of sidebar */
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .navbar-logo {
+    height: 80px;
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.2rem;
+  }
+  
+  .nav-item:hover {
+    background-color: #f8f9fa;
+    color: #bac34e;
+  }
+  
+  /* Other styles remain the same, but you might need to adjust them 
+     to fit the new sidebar layout */
+  
+  

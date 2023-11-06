@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "pantryparcelapp",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "S3DeploymentBucket": "amplify-pantryparcel-staging-210431-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/8456d082d5ec77d1e9b43a5f7392a16af2154c9b"
+}

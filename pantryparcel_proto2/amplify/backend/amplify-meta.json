@@ -1,0 +1,105 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-pantryparcel-staging-210431-authRole",
+      "UnauthRoleArn": "arn:aws:iam::087499475706:role/amplify-pantryparcel-staging-210431-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::087499475706:role/amplify-pantryparcel-staging-210431-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-pantryparcel-staging-210431-deployment",
+      "UnauthRoleName": "amplify-pantryparcel-staging-210431-unauthRole",
+      "StackName": "amplify-pantryparcel-staging-210431",
+      "StackId": "arn:aws:cloudformation:us-east-2:087499475706:stack/amplify-pantryparcel-staging-210431/457e7dc0-6ad5-11ee-852d-06d922cd5ca1",
+      "AmplifyAppId": "d1ph9juylnrng4"
+    }
+  },
+  "api": {
+    "pantryparcelapp": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          }
+        },
+        "GraphQLAPIIdOutput": "4na46wouxrflxd6msx7msblkxa",
+        "GraphQLAPIEndpointOutput": "https://okwy3nbcfveylgxmottykwyme4.appsync-api.us-east-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-77pdqrexzrdchocu3zuw3osabq"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2023-11-01T06:13:16.525Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-staging-210431-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apipantryparcelapp"
+      },
+      "lastPushDirHash": "Dyy44GGFLgziqui7PSRb4XWhsko="
+    }
+  },
+  "auth": {
+    "pantryparcelapp65363ac2": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "us-east-2_hVjjkaqDQ",
+        "AppClientIDWeb": "4ic7guf16h49ib3d7mmnuctba5",
+        "AppClientID": "5hqgrvtkqrt6qougl8tpk2v9jp",
+        "IdentityPoolId": "us-east-2:5b46ebab-c28d-46ab-8873-9028c418a8fe",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-2:087499475706:userpool/us-east-2_hVjjkaqDQ",
+        "IdentityPoolName": "pantryparcelapp65363ac2_identitypool_65363ac2__staging",
+        "UserPoolName": "pantryparcelapp65363ac2_userpool_65363ac2"
+      },
+      "lastPushTimeStamp": "2023-11-01T06:13:16.526Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-staging-210431-deployment/amplify-cfn-templates/auth/pantryparcelapp65363ac2-cloudformation-template.json",
+        "logicalId": "authpantryparcelapp65363ac2"
+      }
+    }
+  },
+  "storage": {
+    "ProductsStorage": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "output": {
+        "BucketName": "productstorage210431-staging",
+        "Region": "us-east-2"
+      },
+      "lastPushTimeStamp": "2023-11-01T06:13:18.578Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-staging-210431-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storageProductsStorage"
+      }
+    }
+  }
+}
