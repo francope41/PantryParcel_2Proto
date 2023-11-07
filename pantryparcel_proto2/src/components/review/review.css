@@ -1,83 +1,106 @@
+/* Base styling for the review section */
+.review {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Space between reviews */
+  padding: 2rem; /* Padding around the grid */
+}
 
+/* Individual review box styling */
+.review .box {
+  background: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 1.5rem; /* Padding inside each box */
+  margin: 1rem 0; /* Vertical margin for spacing */
+}
+
+/* User info styling within the review box */
+.review .box .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between image and text */
+  margin-bottom: 1rem; /* Space below user info */
+}
+
+/* User image styling */
+.review .box .user img {
+  height: 60px; /* Smaller size for user image */
+  width: 60px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* User name and status styling */
+.review .box .user h3 {
+  font-size: 1.5rem; /* Smaller font size for names */
+  color: #333; /* Darker color for text */
+}
+
+.review .box .user span {
+  font-size: 1rem; /* Smaller font size for status */
+  color: #666; /* Lighter color for secondary text */
+}
+
+/* Review text styling */
+.review .box p {
+  font-size: 1rem; /* Smaller font size for review text */
+  color: #333; /* Darker color for readability */
+  line-height: 1.6; /* Increased line height for readability */
+}
+
+/* Info section styling */
 .info-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(27rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .info-container .info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1.5rem;
-    padding: 5rem;
-  }
-  
-  .info-container .info img {
-    height: 5rem;
-  }
-  
-  .info-container .info .content h3 {
-    font-size: 1.8rem;
-    color: #222;
-    padding-bottom: .5rem;
-  }
-  
-  .info-container .info .content span {
-    font-size: 1.4rem;
-    color: #666;
-  }
-  
-  .review {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  
-  .review .box {
-    padding: 2rem;
-    border: 0.1rem solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .review .box .user {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .review .box .user img {
-    height: 7rem;
-    width: 7rem;
-    border-radius: 50%;
-  }
-  
-  .review .box .user h3 {
-    font-size: 2.2rem;
-    color: #222;
-  }
-  
-  .review .box .user span {
-    font-size: 1.4rem;
-    color: #bac34e;
-  }
-  
-  .review .box p {
-    font-size: 1.4rem;
-    color: #666;
-    line-height: 2;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid for info */
+  gap: 2rem; /* Space between info boxes */
+  padding: 2rem; /* Padding around the grid */
+}
+
+.info-container .info {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between icon and text */
+  background: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 1rem; /* Padding inside each info box */
+}
+
+/* Info icons and text styling */
+.info-container .info img {
+  height: 50px; /* Adjusted icon size */
+  width: 50px; /* Maintain aspect ratio */
+}
+
+.info-container .info .content h3 {
+  font-size: 1.5rem; /* Size for info title */
+  color: #333; /* Color for info title */
+}
+
+.info-container .info .content span {
+  font-size: 1rem; /* Size for info subtitle */
+  color: #666; /* Color for info subtitle */
+}
+
+/* Heading section styling */
+.heading {
+  text-align: center; /* Center align the heading */
+  padding: 2rem 0; /* Padding around heading */
+  background: none; /* Remove background image for a cleaner look */
+}
+
+.heading h1 {
+  font-size: 2.5rem; /* Adjusted font size for heading */
+  color: #333; /* Darker color for heading */
+}
+
+.heading p {
+  font-size: 1rem; /* Adjusted font size for breadcrumb */
+  color: #666; /* Color for breadcrumb */
+}
+
+.heading a {
+  color: #bac34e; /* Color for links */
+  text-decoration: none; /* Remove underline from links */
+}
