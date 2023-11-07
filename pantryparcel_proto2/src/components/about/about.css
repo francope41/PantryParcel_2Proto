@@ -1,119 +1,117 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
 
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* About section styling */
 .about {
-    padding: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  .about .content,
-  .about .image {
-    flex: 1 1 5rem;
-    padding: 0;
-  }
-  
-  .about .image img {
-    width: 100%;
-  }
-    
-  .about .content span {
-    color: #bac34e;
-    font-size: 2.5rem;
-  }
-  
-  .about .content h3 {
-    color: #222;
-    font-size: 3rem;
-    padding-top: .5rem;
-  }
-  
-  .about .content p {
-    color: #666;
-    font-size: 1.4rem;
-    line-height: 2;
-    padding: 1rem 0;
-  }
-  
-.gallery{
-    padding: 50px;
+  padding: 2rem; /* Uniform padding */
+  display: flex;
+  flex-direction: column; /* Stack content vertically on mobile */
+  align-items: center; /* Center align the items */
+  text-align: center; /* Center text for a modern look */
+  gap: 1.5rem;
+  background: #fff; /* Light background for the section */
 }
+
+.about .content, .about .image {
+  width: 100%; /* Full width on mobile */
+  max-width: 600px; /* Max width for larger screens */
+  margin-bottom: 2rem;
+}
+
+.about .image img {
+  width: 100%;
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+.about .content span, .about .content h3, .about .content p {
+  margin-bottom: 1rem; /* Spacing between text elements */
+}
+
+.about .content span {
+  color: #bac34e;
+  font-size: 2rem;
+}
+
+.about .content h3 {
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.about .content p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Gallery styles */
+.gallery {
+  padding: 2rem;
+}
+
 .gallery .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the 200px to your preferred minimum width */
-    gap: 1.5rem;
-    justify-content: center;
-}
-  
-  
-  .gallery .box-container .box {
-    height: 25rem;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .gallery .box-container .box img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  
-  .gallery .box-container .box:hover img {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  
-  .gallery .box-container .box:hover .icons {
-    bottom: 0;
-  }
-  
-  .gallery .box-container .box .icons {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 1.5rem 0;
-    position: absolute;
-    bottom: -6rem;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-  
-  .gallery .box-container .box .icons a {
-    font-size: 2.5rem;
-    color: #fff;
-    margin: 0 1.5rem;
-  }
-  
-  .gallery .box-container .box .icons a:hover {
-    color: #bac34e;
-  }
-
-.icons .fa-eye,
-.icons .fa-heart,
-.icons .fa-share-alt {
-  color: white;
-  font-size: 1.5rem; /* Adjust size as needed */
-  margin-right: 10px; /* Space between icons */
-  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and size */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
 
-.icons .fa-eye:hover,
-.icons .fa-heart:hover,
-.icons .fa-share-alt:hover {
-  color: #bac34e; /* Your green color */
-  transform: scale(1.1); /* Slightly increase size */
+.gallery .box {
+  height: auto; /* Let the height be determined by content */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners for gallery items */
 }
+
+.gallery .box img {
+  width: 100%;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.gallery .box:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.gallery .box .icons {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px; /* Position icons at the bottom */
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease; /* Smooth transition */
+  opacity: 0; /* Hide initially */
+}
+
+.gallery .box:hover .icons {
+  opacity: 1; /* Show icons on hover */
+}
+
 .icon {
-    cursor: pointer;
-    transition: transform 0.2s, color 0.2s;
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #bac34e;
+}
+
+/* Adjustments for different screen sizes */
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row; /* Side-by-side on larger screens */
+    text-align: left; /* Left-aligned text for larger screens */
+    justify-content: center; /* Center the content */
   }
   
-  .icon:hover {
-    transform: scale(1.1);
-    color: #bac34e; /* Adjust the color as per your theme */
+  .about .content, .about .image {
+    flex: 1; /* Equal width */
+    padding: 1rem; /* Spacing */
   }
+}
