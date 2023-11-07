@@ -26,7 +26,7 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 365,
-              "apiKeyExpirationDate": "2024-11-06T03:33:13.049Z",
+              "apiKeyExpirationDate": "2024-11-06T05:14:13.109Z",
               "description": "API KEY"
             }
           }
@@ -37,7 +37,7 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2023-11-07T03:42:05.723Z",
+      "lastPushTimeStamp": "2023-11-07T05:14:18.495Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-main-15713-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apipantryparcelapp"

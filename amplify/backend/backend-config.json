@@ -11,7 +11,7 @@
           ],
           "defaultAuthentication": {
             "apiKeyConfig": {
-              "apiKeyExpirationDate": "2024-11-06T03:33:13.049Z",
+              "apiKeyExpirationDate": "2024-11-06T05:14:13.109Z",
               "apiKeyExpirationDays": 365,
               "description": "API KEY"
             },
@@ -49,6 +49,24 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_storage_pantryparcelb0ec9995_bucketName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "pantryparcelb0ec9995"
+        }
+      ]
+    },
+    "AMPLIFY_storage_pantryparcelb0ec9995_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "pantryparcelb0ec9995"
+        }
+      ]
     }
   },
   "storage": {
