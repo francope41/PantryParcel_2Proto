@@ -23,11 +23,12 @@
             }
           ],
           "defaultAuthentication": {
+            "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 30,
-              "description": "api key description"
-            },
-            "authenticationType": "API_KEY"
+              "apiKeyExpirationDays": 365,
+              "apiKeyExpirationDate": "2024-11-06T03:33:13.049Z",
+              "description": "API KEY"
+            }
           }
         },
         "GraphQLAPIIdOutput": "vwlp5e3r6vc3bbaymlehnobx5q",
@@ -36,11 +37,12 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2023-11-07T03:30:29.969Z",
+      "lastPushTimeStamp": "2023-11-07T03:36:28.558Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-main-15713-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apipantryparcelapp"
-      }
+      },
+      "lastPushDirHash": "9+j4VpgrveJB2j4gvTtyLsXlHcM="
     }
   },
   "auth": {
@@ -78,7 +80,7 @@
         "IdentityPoolName": "pantryparcelapp65363ac2_identitypool_65363ac2__main",
         "UserPoolName": "pantryparcelapp65363ac2_userpool_65363ac2"
       },
-      "lastPushTimeStamp": "2023-11-07T03:30:29.970Z",
+      "lastPushTimeStamp": "2023-11-07T03:36:25.512Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-main-15713-deployment/amplify-cfn-templates/auth/pantryparcelapp65363ac2-cloudformation-template.json",
         "logicalId": "authpantryparcelapp65363ac2"

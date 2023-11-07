@@ -1,4 +1,4 @@
-type Todo {
+type Todo @aws_iam @aws_api_key {
   id: ID!
   productName: String!
   productDescription: String!
@@ -161,7 +161,7 @@ enum ModelSortDirection {
   DESC
 }
 
-type ModelTodoConnection {
+type ModelTodoConnection @aws_api_key @aws_iam {
   items: [Todo]!
   nextToken: String
 }
@@ -181,8 +181,8 @@ input ModelTodoFilterInput {
 }
 
 type Query {
-  getTodo(id: ID!): Todo
-  listTodos(filter: ModelTodoFilterInput, limit: Int, nextToken: String): ModelTodoConnection
+  getTodo(id: ID!): Todo @aws_api_key @aws_iam
+  listTodos(filter: ModelTodoFilterInput, limit: Int, nextToken: String): ModelTodoConnection @aws_api_key @aws_iam
 }
 
 input ModelTodoConditionInput {
@@ -225,9 +225,9 @@ input DeleteTodoInput {
 }
 
 type Mutation {
-  createTodo(input: CreateTodoInput!, condition: ModelTodoConditionInput): Todo
-  updateTodo(input: UpdateTodoInput!, condition: ModelTodoConditionInput): Todo
-  deleteTodo(input: DeleteTodoInput!, condition: ModelTodoConditionInput): Todo
+  createTodo(input: CreateTodoInput!, condition: ModelTodoConditionInput): Todo @aws_api_key @aws_iam
+  updateTodo(input: UpdateTodoInput!, condition: ModelTodoConditionInput): Todo @aws_api_key @aws_iam
+  deleteTodo(input: DeleteTodoInput!, condition: ModelTodoConditionInput): Todo @aws_api_key @aws_iam
 }
 
 input ModelSubscriptionTodoFilterInput {
@@ -244,7 +244,7 @@ input ModelSubscriptionTodoFilterInput {
 }
 
 type Subscription {
-  onCreateTodo(filter: ModelSubscriptionTodoFilterInput): Todo @aws_subscribe(mutations: ["createTodo"])
-  onUpdateTodo(filter: ModelSubscriptionTodoFilterInput): Todo @aws_subscribe(mutations: ["updateTodo"])
-  onDeleteTodo(filter: ModelSubscriptionTodoFilterInput): Todo @aws_subscribe(mutations: ["deleteTodo"])
+  onCreateTodo(filter: ModelSubscriptionTodoFilterInput): Todo @aws_subscribe(mutations: ["createTodo"]) @aws_api_key @aws_iam
+  onUpdateTodo(filter: ModelSubscriptionTodoFilterInput): Todo @aws_subscribe(mutations: ["updateTodo"]) @aws_api_key @aws_iam
+  onDeleteTodo(filter: ModelSubscriptionTodoFilterInput): Todo @aws_subscribe(mutations: ["deleteTodo"]) @aws_api_key @aws_iam
 }
