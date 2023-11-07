@@ -26,7 +26,7 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 365,
-              "apiKeyExpirationDate": "2024-11-06T05:14:13.109Z",
+              "apiKeyExpirationDate": "2024-11-06T05:19:03.950Z",
               "description": "API KEY"
             }
           }
@@ -37,12 +37,12 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2023-11-07T05:14:18.495Z",
+      "lastPushTimeStamp": "2023-11-07T05:19:13.010Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-main-15713-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apipantryparcelapp"
       },
-      "lastPushDirHash": "9+j4VpgrveJB2j4gvTtyLsXlHcM="
+      "lastPushDirHash": "DqjCdqgtoo1xb+PD6rhQRwQ+4Ss="
     }
   },
   "auth": {
@@ -80,7 +80,7 @@
         "IdentityPoolName": "pantryparcelapp65363ac2_identitypool_65363ac2__main",
         "UserPoolName": "pantryparcelapp65363ac2_userpool_65363ac2"
       },
-      "lastPushTimeStamp": "2023-11-07T03:42:05.724Z",
+      "lastPushTimeStamp": "2023-11-07T05:17:19.048Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-main-15713-deployment/amplify-cfn-templates/auth/pantryparcelapp65363ac2-cloudformation-template.json",
         "logicalId": "authpantryparcelapp65363ac2"
@@ -103,7 +103,16 @@
       "service": "S3",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
-      "lastPushTimeStamp": "2023-11-07T03:42:09.267Z"
+      "lastPushTimeStamp": "2023-11-07T05:17:21.935Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-main-15713-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storageStorage123"
+      },
+      "output": {
+        "BucketName": "productstorage10256-main15713-main",
+        "Region": "us-east-2"
+      },
+      "lastPushDirHash": "UogRqmPNu7tjVZHGmev0DfOG0nI="
     }
   }
 }

@@ -16,7 +16,8 @@
         "pantryparcelb0ec9995": {
           "bucketName": "productstorage10256-main",
           "region": "us-east-2"
-        }
+        },
+        "Storage123": {}
       },
       "auth": {
         "pantryparcelapp65363ac2": {}
