@@ -37,7 +37,7 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2023-11-07T03:36:28.558Z",
+      "lastPushTimeStamp": "2023-11-07T03:42:05.723Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-main-15713-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apipantryparcelapp"
@@ -80,7 +80,7 @@
         "IdentityPoolName": "pantryparcelapp65363ac2_identitypool_65363ac2__main",
         "UserPoolName": "pantryparcelapp65363ac2_userpool_65363ac2"
       },
-      "lastPushTimeStamp": "2023-11-07T03:36:25.512Z",
+      "lastPushTimeStamp": "2023-11-07T03:42:05.724Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-main-15713-deployment/amplify-cfn-templates/auth/pantryparcelapp65363ac2-cloudformation-template.json",
         "logicalId": "authpantryparcelapp65363ac2"
@@ -98,6 +98,12 @@
         "Region": "us-east-2"
       },
       "lastPushTimeStamp": "2023-11-07T03:09:47.853Z"
+    },
+    "Storage123": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "lastPushTimeStamp": "2023-11-07T03:42:09.267Z"
     }
   }
 }
