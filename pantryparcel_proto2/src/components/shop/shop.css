@@ -4,23 +4,28 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.shop-page {
+  padding: 2rem;
+  background: #f7f7f7; /* Light background to keep the focus on products */
+}
+
 .heading {
   background: url(../image/heading-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding-top: 12rem;
-  padding-bottom: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 
 .heading h1 {
-  font-size: 3rem;
-  color: #222;
+  font-size: 2.5rem;
+  color: #333; /* Darker text for better readability */
 }
 
 .heading p {
-  font-size: 1.5rem;
-  color: #666;
+  font-size: 1rem;
+  color: #333; /* Consistent text color */
 }
 
 .heading a {
@@ -28,30 +33,41 @@
   text-decoration: none;
 }
 
-.category,
-.products {
-  padding: 4rem 0;
+/* Category navigation */
+.category-nav {
+  display: flex;
+  justify-content: center; /* This will center the buttons in the container */
+  align-items: center; /* This will vertically align the buttons */
+  flex-wrap: wrap; /* This allows for wrapping if there are too many buttons to fit in one line */
+  gap: 10px; /* This adds some space between the buttons */
+  padding: 1rem; /* Adjust padding as needed */
+  background: #f7f7f7; /* Any background color */
+  /* ... other styles ... */
 }
 
-.category .title,
-.products .title {
-  text-align: center;
-  font-size: 3rem;
-  color: #222;
-  margin-bottom: 2rem;
+.category-button {
+  color: #333; /* Dark text for readability */
+  border-radius: 20px; /* Rounded corners */
+  margin: 0 0.5rem; /* Margin for spacing between buttons */
+  transition: all 0.3s ease; /* Transition for effects */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 0.5rem 1rem;
+
 }
 
-.category .title span,
-.products .title span {
-  color: #bac34e;
+.category-button:hover {
+  transform: translateY(-2px); /* Slight raise on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
 
-.category .title a,
-.products .title a {
-  font-size: 1.5rem;
-  color: #666;
-  text-decoration: none;
-  margin-left: 1rem;
+/* Hide the scrollbar for aesthetic purposes */
+.category-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.category-nav {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 
@@ -63,16 +79,17 @@
   justify-content: center; /* Center the entire content of the grid */
 }
 
-.box {
-  text-align: center;
-  text-decoration: none;
-  color: #666;
-  transition: color 0.3s;
+.products .box {
+  background: #ffffff; /* White background for product cards */
+  border-radius: 10px; /* Rounded corners to match category buttons */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Keeps the content within the rounded corners */
+  text-align: center; /* Center the text inside the box */
+  margin-bottom: 2rem; /* Spacing between product cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-.box:hover {
-  color: #bac34e;
-}
+
 
 .box img {
   max-width: 100%;
@@ -84,19 +101,30 @@
 }
 
 .products .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Adjusted the gap between boxes */
+  padding: 1rem;
+  align-items: start; /* Aligns items to the start of the grid area */
 }
 
 .products .box {
   background: #ffffff;
+  border-radius: 10px; /* Adds rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: auto; /* Centers the box within the grid column */
   overflow: hidden;
   width: 284.54px;
   height: 428.86px;
   position: relative; /* Add this line */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
+.products .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 
 .products .icons {
   position: absolute;
@@ -118,7 +146,8 @@
 }
 
 .products .icon-FA {
-  color: #666;
+  margin: 0 0.5rem; /* Spacing between icons */
+  font-size: 1.5rem; /* Larger icons for better interaction */
 }
 .products .icon-FA:hover {
   color: #bac34e;
@@ -139,25 +168,24 @@
 }
 
 .products .box .image img {
-  width: 100%; /* Will take the full width of the container */
-  height: auto; /* Height will scale automatically to maintain the aspect ratio */
-  object-fit:scale-down; /* Will ensure the image fits within the container without cropping */
-  max-height: 230px; /* Optional: if you want to restrict the image height to the container's max-height */
+  width: 100%; /* Image takes full width of the box */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the box area without stretching */
 }
 
 .products .box .content {
-  padding: 0.5rem;
+  padding: 1rem; /* Consistent padding with category buttons */
 }
 
 .products .box .content h3 {
-  font-size: 1.2rem;
-  color: #222;
+  font-size: 1.5rem; /* Font size similar to category buttons */
+  color: #333; /* Darker text for better readability */
 }
 
 .products .box .content .price {
-  font-size: 2rem;
-  color: #222;
-  padding: 1rem 0;
+  font-size: 1.2rem; /* Smaller font size for price */
+  color: #333;
+  padding: 0.5rem 0; /* Spacing around the price */
 }
 .products .box.expanded {
   position: fixed;
@@ -179,8 +207,18 @@
 }
 
 .products .box.expanded .icons {
-  position: static;
-  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -50px; /* Start below the box */
+  left: 0;
+  right: 0;
+  transition: bottom 0.3s ease;
+  background-color: rgba(50, 50, 50, 0.8); /* Match category button color */
+  color: white; /* White icons for visibility */
+  padding: 0.5rem;
+  border-bottom-left-radius: 10px; /* Rounded corners at the bottom */
+  border-bottom-right-radius: 10px;
 }
 .products .expanded-content {
   display: flex;
@@ -223,11 +261,12 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #28a745;
+  background-color: rgba(50, 50, 50, 0.8); /* Match category button color */
   color: #ffffff;
-  padding: 10px;
-  border-radius: 0 0 5px 5px;
+  padding: 0.5rem 1rem; /* Padding similar to category buttons */
+  border-radius: 10px; /* Rounded corners */
   z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .search-bar {
   display: flex;

@@ -14,12 +14,12 @@ function Shop() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleCategoryClick = (category) => {
-    console.log("Selected Category:", category); // This will print the selected category to the console
+    console.log("Selected Category:", category);
     setSelectedCategory(category);
   };
 
   return (
-    <div>
+    <div className="shop-page">
       <Heading />
       <Category onCategoryClick={handleCategoryClick} />
       <Products selectedCategory={selectedCategory}/>

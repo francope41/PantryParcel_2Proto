@@ -10,28 +10,29 @@ import cat8 from '../image/dairy products.png';
 
 function Category({ onCategoryClick }) {
   const categories = [
-    { id: 1, image: cat1, name: "Fresh Fruits" },
-    { id: 2, image: cat2, name: "Vegetables" },
-    { id: 3, image: cat3, name: "Chips" },
-    { id: 4, image: cat4, name: "Juice" },
-    { id: 5, image: cat5, name: "Breakfast Specials" },
-    { id: 6, image: cat6, name: "Chocolates" },
-    { id: 7, image: cat7, name: "Cookies" },
-    { id: 8, image: cat8, name: "Dairy products" },
+    { id: 1, image: cat1, name: "Fresh Fruits", color: '#FFE4B5' }, // Moccasin for fresh fruits
+    { id: 2, image: cat2, name: "Vegetables", color: '#90EE90' }, // Light Green for vegetables
+    { id: 3, image: cat3, name: "Chips", color: '#CDA4DE' }, // Thistle (Light Purple) for chips
+    { id: 4, image: cat4, name: "Juice", color: '#FFA07A' }, // Light Coral (Red) for juice
+    { id: 5, image: cat5, name: "Breakfast Specials", color: 'linear-gradient(45deg, #FFD700, #FF6347)' }, // Gradient from Gold to Tomato
+    { id: 6, image: cat6, name: "Chocolates", color: '#CD853F' }, // Peru for chocolates
+    { id: 7, image: cat7, name: "Cookies", color: '#DEB887' }, // Burlywood for cookies
+    { id: 8, image: cat8, name: "Dairy Products", color: '#FFFACD' }, // Lemon Chiffon for dairy products
   ];
-
+  
   return (
-    <section className="category">
-      <h1 className="title"> Our <span>Category</span> </h1>
-      <div className="box-container">
-        {categories.map(category => (
-          <a href="#" className="box" key={category.id} onClick={() => onCategoryClick(category.name)}>
-            <img src={category.image} alt={category.name} className="category-image" />
-            <h3>{category.name}</h3>
-          </a>
-        ))}
-      </div>
-    </section>
+    <nav className="category-nav">
+      {categories.map(category => (
+        <button 
+          className="category-button" 
+          key={category.id} 
+          onClick={() => onCategoryClick(category.name)}
+          style={{ background: category.color }}
+        >
+          {category.name}
+        </button>
+      ))}
+    </nav>
   );
 }
 
