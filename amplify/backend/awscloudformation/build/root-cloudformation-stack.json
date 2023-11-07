@@ -155,7 +155,7 @@
     "apipantryparcelapp": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-staging-210431-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-main-15713-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "Parameters": {
           "AppSyncApiName": "pantryparcelapp",
           "DynamoDBBillingMode": "PAY_PER_REQUEST",
@@ -166,16 +166,16 @@
           "unauthRoleName": {
             "Ref": "UnauthRoleName"
           },
-          "S3DeploymentBucket": "amplify-pantryparcel-staging-210431-deployment",
+          "S3DeploymentBucket": "amplify-pantryparcel-main-15713-deployment",
           "S3DeploymentRootKey": "amplify-appsync-files/8456d082d5ec77d1e9b43a5f7392a16af2154c9b",
-          "env": "staging"
+          "env": "main"
         }
       }
     },
     "authpantryparcelapp65363ac2": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-staging-210431-deployment/amplify-cfn-templates/auth/pantryparcelapp65363ac2-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-main-15713-deployment/amplify-cfn-templates/auth/pantryparcelapp65363ac2-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "pantryparcelapp65363ac2_identitypool_65363ac2",
           "allowUnauthenticatedIdentities": true,
@@ -222,40 +222,7 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
-          "env": "staging"
-        }
-      }
-    },
-    "storageProductsStorage": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-pantryparcel-staging-210431-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
-        "Parameters": {
-          "bucketName": "productstorage",
-          "selectedGuestPermissions": "s3:GetObject,s3:ListBucket",
-          "selectedAuthenticatedPermissions": "s3:GetObject,s3:ListBucket",
-          "unauthRoleName": {
-            "Ref": "UnauthRoleName"
-          },
-          "authRoleName": {
-            "Ref": "AuthRoleName"
-          },
-          "s3PrivatePolicy": "Private_policy_0be3330b",
-          "s3ProtectedPolicy": "Protected_policy_0be3330b",
-          "s3PublicPolicy": "Public_policy_0be3330b",
-          "s3ReadPolicy": "read_policy_0be3330b",
-          "s3UploadsPolicy": "Uploads_policy_0be3330b",
-          "authPolicyName": "s3_amplify_0be3330b",
-          "unauthPolicyName": "s3_amplify_0be3330b",
-          "AuthenticatedAllowList": "ALLOW",
-          "GuestAllowList": "ALLOW",
-          "s3PermissionsAuthenticatedPrivate": "s3:GetObject",
-          "s3PermissionsAuthenticatedProtected": "s3:GetObject",
-          "s3PermissionsAuthenticatedPublic": "s3:GetObject",
-          "s3PermissionsAuthenticatedUploads": "DISALLOW",
-          "s3PermissionsGuestPublic": "s3:GetObject",
-          "s3PermissionsGuestUploads": "DISALLOW",
-          "env": "staging"
+          "env": "main"
         }
       }
     },

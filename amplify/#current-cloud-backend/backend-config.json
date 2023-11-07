@@ -50,11 +50,30 @@
       "service": "Cognito"
     }
   },
+  "parameters": {
+    "AMPLIFY_storage_pantryparcelb0ec9995_bucketName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "pantryparcelb0ec9995"
+        }
+      ]
+    },
+    "AMPLIFY_storage_pantryparcelb0ec9995_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "pantryparcelb0ec9995"
+        }
+      ]
+    }
+  },
   "storage": {
-    "ProductsStorage": {
+    "pantryparcelb0ec9995": {
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
-      "service": "S3"
+      "service": "S3",
+      "serviceType": "imported"
     }
   }
 }
