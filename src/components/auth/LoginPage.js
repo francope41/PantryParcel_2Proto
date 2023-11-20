@@ -56,7 +56,7 @@ function LoginPage() {
             },
             _active: {
               color: {
-                value: '#bac34e', // White text when active
+                value: '#bac34a', // White text when active bac34e
               },
             },
           },
